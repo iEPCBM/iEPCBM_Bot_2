@@ -60,9 +60,6 @@ def updateTabData (listData, site):
         page = pywikibot.Page(site, chData["dataPage"])
         if len(page.text) == 0:
             createTabPage (page,chData)
-        if re.search(r'\{\{(nobots|bots\|(allow=none|deny=.*?[iI]EPCBM Bot.*?|optout=all|deny=all))\}\}', page.text):
-            print ("Denied for editing page " + "[[" +chData["dataPage"] + "]]")
-            continue
         parsedPageData = json.loads (page.text)
         parsedPageData["data"].append ([round(time.time()), int(chData["subscriberCount"]), int(chData["viewCount"])])
         saveDesc = saveDescPrefix + saveDescStrBase + chData["channelName"]
