@@ -41,7 +41,6 @@ from bot_config import *
 
 
 def getChannelData (ChannelID):
-    # TODO: change code )
     try:
         response = urllib.request.urlopen(URLGoogleAPI_YTChannels+"?part=statistics&id="+ChannelID+"&key="+GoogleAPI_key_code)
     except urllib.error.URLError as err:
