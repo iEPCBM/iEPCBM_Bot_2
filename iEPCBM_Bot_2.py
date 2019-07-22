@@ -34,11 +34,7 @@ sys.path.append(os.path.join(curDir, "modules"))
 sys.path.append(os.path.join(curDir, "conf"))
 sys.path.append(os.path.join(curDir, "modules/tools"))
 
-import math
 import pywikibot
-import datetime
-import re
-import time
 
 from pressEnter import *
 from bot_config import *

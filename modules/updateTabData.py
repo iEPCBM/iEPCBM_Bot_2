@@ -31,12 +31,9 @@ import os, sys
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(os.path.join(os.path.dirname(__file__), "tools"))
 
-import math
 import time
 import json
 import pywikibot
-import datetime
-import re
 
 from bot_config import *
 from pressEnter import *

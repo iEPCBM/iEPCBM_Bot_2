@@ -32,9 +32,6 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
 
 import urllib.request
 import json
-import logging
-import math
-import time
 import pywikibot
 
 from bot_config import *
