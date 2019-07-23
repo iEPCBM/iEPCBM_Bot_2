@@ -26,10 +26,14 @@
     The program uses GoogleAPI.
     GoogleAPIs Terms of Service - <https://developers.google.com/terms/>
 '''
-
 # == GoogleAPI ==
 URLGoogleAPI_YTChannels = "https://www.googleapis.com/youtube/v3/channels"
-from api_keys import *
+
+# Contains strings GoogleAPI_key_code and channelsListPage
+from hiddenConfig import *
+# String channelsListPage contains title of page that contains tabular data with
+# basic information of YouTube channels (channel title and channel ID) and
+# titles to pages for collect statistics (views and subscribers) as tabular data
 
 # == Save description ==
 saveDescPrefix       = u"Bot: "
@@ -38,15 +42,13 @@ saveDescTextOverflow = u"…" # text overflow symbol(s)
 saveDescEndingPlural = u"s: "
 saveDescStrBase      = u"update statistics for channel "
 
-# == Time quotas (sec) ==
-wikiMinQuota = 3
-GoogleAPI_MinQuota = 0.5
+# == Local time quotas (sec) ==
+wikiLocalQuota = 5
+GoogleAPI_LocalQuota = 0
 
 unknownCount = -1
 
 isDebug = True
-
-channelsListPage = u"Data:Sandbox/IEPCBM Bot/test channels list.tab"
 
 dictTabDataTemplate = {
     "license": "CC0-1.0",
