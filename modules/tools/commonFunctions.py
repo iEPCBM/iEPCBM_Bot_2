@@ -34,7 +34,9 @@ def pressEnter (message="Waiting for user agree...\nPress <ENTER> to continue...
     input ()
     return 0
 
-def messageAndSleep (t, message="Sleeping for "+str(t)+" second(s)"):
+def messageAndSleep (t, message="Sleeping..."):
+    if t <= 0:
+        return 0
     print (message)
     time.sleep(t)
     return 0
