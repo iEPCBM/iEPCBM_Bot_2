@@ -34,10 +34,11 @@ import urllib.request
 import json
 import pywikibot
 
+from commonFunctions import *
 from bot_config import *
 
-
 def getChannelData (ChannelID):
+    messageAndSleep(GoogleAPI_LocalQuota, "Sleeping for "+str(GoogleAPI_LocalQuota)+" second(s)...")
     try:
         response = urllib.request.urlopen(URLGoogleAPI_YTChannels+"?part=statistics&id="+ChannelID+"&key="+GoogleAPI_key_code)
     except urllib.error.URLError as err:
