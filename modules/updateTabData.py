@@ -36,7 +36,7 @@ import json
 import pywikibot
 
 from bot_config import *
-from pressEnter import *
+from commonFunctions import *
 from getData import *
 
 def createTabPage (page, chData):
@@ -63,5 +63,6 @@ def updateTabData (listData, site):
         saveDesc = (saveDesc[:saveDescMaxLen-len(saveDescTextOverflow)] + saveDescTextOverflow) if len(saveDesc) > saveDescMaxLen else saveDesc
         print ("Save description: " + saveDesc)
         page.text = json.dumps(parsedPageData)
+        messageAndSleep(wikiLocalQuota, "Sleeping for "+str(wikiLocalQuota)+" second(s)...")
         page.save(saveDesc)
     return True
