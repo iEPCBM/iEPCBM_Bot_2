@@ -36,7 +36,7 @@ sys.path.append(os.path.join(curDir, "modules/tools"))
 
 import pywikibot
 
-from pressEnter import *
+from commonFunctions import *
 from bot_config import *
 from getData import *
 from updateTabData import *
