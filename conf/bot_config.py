@@ -40,7 +40,7 @@ saveDescPrefix       = u"Bot: "
 saveDescMaxLen       = 255
 saveDescTextOverflow = u"…" # text overflow symbol(s)
 saveDescEndingPlural = u"s: "
-saveDescStrBase      = u"update statistics for channel "
+saveDescStrBase      = u"update statistics of channel "
 
 # == Local time quotas (sec) ==
 wikiLocalQuota = 5
