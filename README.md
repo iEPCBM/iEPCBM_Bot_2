@@ -18,4 +18,4 @@ The bot uses PyWikiBot and GoogleAPI.
 Rishat Kagirov
 * E-mail: iepcbm@yandex.ru
 * I in ruwiki: <https://ru.wikipedia.org/wiki/Участник:IEPCBM>
-* This bot in ruwiki: <https://ru.wikipedia.org/wiki/Участник:IEPCBM_Bot>
+* This bot in Wikimedia Commons: <https://commons.wikimedia.org/wiki/User:IEPCBM_Bot>
