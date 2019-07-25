@@ -12,6 +12,8 @@ GoogleAPIs Terms of Service - <https://developers.google.com/terms/>
 
 **iEPCBM Bot 2** is Wikimedia Commons bot. It updates statistics of YouTube channels.
 
+**Version:** 2.0 (Vera)
+
 The bot uses PyWikiBot and GoogleAPI.
 
 ## Contacts
