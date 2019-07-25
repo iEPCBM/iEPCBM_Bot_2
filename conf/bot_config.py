@@ -29,7 +29,7 @@
 # == GoogleAPI ==
 URLGoogleAPI_YTChannels = "https://www.googleapis.com/youtube/v3/channels"
 
-# Contains strings GoogleAPI_key_code and channelsListPage
+# Contains strings GoogleAPI_key_code, channelsListPage and boolean isDebug
 from hiddenConfig import *
 # String channelsListPage contains title of page that contains tabular data with
 # basic information of YouTube channels (channel title and channel ID) and
@@ -47,8 +47,6 @@ wikiLocalQuota = 5
 GoogleAPI_LocalQuota = 0
 
 unknownCount = -1
-
-isDebug = True
 
 dictTabDataTemplate = {
     "license": "CC0-1.0",
