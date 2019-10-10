@@ -9,9 +9,11 @@ Copyright 2019 Rishat Kagirov (iEPCBM)
 
 SPDX-License-Identifier: Apache-2.0
 
-The program uses GoogleAPI.
+The program uses GoogleAPI (YouTube API Services).
 
-GoogleAPIs Terms of Service - <https://developers.google.com/terms/>
+GoogleAPI Terms of Service - <https://developers.google.com/terms/>
+
+YouTube API Services Terms of Service - <https://developers.google.com/youtube/terms/api-services-terms-of-service>
 ***
 
 The bot uses PyWikiBot and GoogleAPI.
