@@ -47,6 +47,7 @@ def createTabPage (page, chData):
         YTChannelBaseLink + chData["channelID"] + "]" + " (" + \
         chData["channelName"] + ")"
     page.text = json.dumps(parsedNewPageData)
+
 def updateTabData (listData, site):
     for chData in listData:
         print ("Current channel: " + chData["channelName"])
@@ -54,15 +55,16 @@ def updateTabData (listData, site):
             pressEnter ()
         if chData["dataPage"] == "":
             continue
-        page = pywikibot.Page(site, chData["dataPage"])
-        if len(page.text) == 0:
-            createTabPage (page,chData)
-        parsedPageData = json.loads (page.text)
-        parsedPageData["data"].append ([round(time.time()), int(chData["subscriberCount"]), int(chData["viewCount"])])
-        saveDesc = saveDescPrefix + saveDescStrBase + chData["channelName"]
-        saveDesc = (saveDesc[:saveDescMaxLen-len(saveDescTextOverflow)] + saveDescTextOverflow) if len(saveDesc) > saveDescMaxLen else saveDesc
-        print ("Save description: " + saveDesc)
-        page.text = json.dumps(parsedPageData)
-        messageAndSleep(wikiLocalQuota, "Sleeping for "+str(wikiLocalQuota)+" second(s)...")
-        page.save(saveDesc)
+        if chData["subscriberCount"]>=minSubscribers and chData["viewCount"]>=minViews:
+            page = pywikibot.Page(site, chData["dataPage"])
+            if len(page.text) == 0:
+                createTabPage (page,chData)
+            parsedPageData = json.loads (page.text)
+            parsedPageData["data"].append ([round(time.time()), int(chData["subscriberCount"]), int(chData["viewCount"])])
+            saveDesc = saveDescPrefix + saveDescStrBase + chData["channelName"]
+            saveDesc = (saveDesc[:saveDescMaxLen-len(saveDescTextOverflow)] + saveDescTextOverflow) if len(saveDesc) > saveDescMaxLen else saveDesc
+            print ("Save description: " + saveDesc)
+            page.text = json.dumps(parsedPageData)
+            messageAndSleep(wikiLocalQuota, "Sleeping for "+str(wikiLocalQuota)+" second(s)...")
+            page.save(saveDesc)
     return True

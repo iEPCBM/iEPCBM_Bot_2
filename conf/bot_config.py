@@ -48,6 +48,9 @@ GoogleAPI_LocalQuota = 0
 
 unknownCount = -1
 
+minSubscribers = 5000000 # minimal subscribers count
+minViews = 10000000 # minimal view count
+
 dictTabDataTemplate = {
     "license": "CC0-1.0",
     "description": {
